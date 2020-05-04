@@ -1,10 +1,10 @@
 import React from 'react';
 import TodoListItem from './TodoListItem';
-import 'TodoList.scss';
+import './TodoList.scss';
 
 const TodoList = () => {
     return (
-        <div className="TodoLIst">
+        <div className="TodoList">
             <TodoListItem />
             <TodoListItem />
             <TodoListItem />
