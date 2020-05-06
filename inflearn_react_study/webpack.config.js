@@ -1,8 +1,8 @@
 const path = require('path');
 
 module.exports = {
-    mode: '',
-    devtool: '',
+    mode: 'development',
+    devtool: 'eval',
     resolve: {
         extensions: ['.js', '.jsx'],
     },
