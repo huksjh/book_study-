@@ -7,25 +7,31 @@ module.exports = {
         extensions: ['.js', '.jsx'],
     },
 
-    entry :{
-        app: ['./client'],
+    entry: {
+        app: ['./src/index'],
     },
 
-    module :{
+    module: {
         rules: [
             {
                 test: /\.jsx?/,
                 loader: 'babel-loader',
                 options: {
                     presets: ['@babel/preset-env', '@babel/preset-react'],
-                    plugins: ['@babel/plugin-proposal-class-properties'],
+                    plugins: [],
                 },
             },
         ],
     },
 
-    output :{
-        path = path.join(__dirname, 'dist'),
-        filename : 'app.js'
-    }
+    output: {
+        path: path.join(__dirname, 'public'),
+        filename: 'bundle.js',
+    },
+
+    devServer: {
+        inline: true,
+        port: 7777,
+        contentBase: __dirname + '/public/',
+    },
 };
